@@ -27,10 +27,19 @@ fun main()
     {
         print(" "+arr3[i])
     }
-//   var sort1=arr2.sort()
-//    println("Sorted array of 2")
+//   var sort1=arr1.sort()
+//    println("Sorted array  using Built in function")
+//    println("Origional array: ")
+//    println(Arrays.deepToString(arr1))
 //    println(Arrays.deepToString(sort1))
 
 //    var arr4=Array<Int>(5){i:Int->1}
 //    for (i
+  // 2D array
+  var arr_2D= arrayOf( arrayOf(1,2,3),
+                       arrayOf(4,5,6)
+                     )
+    println("\n2D array example: \n"+Arrays.deepToString(arr_2D))
+    println("\n2D array example: \n"+Arrays.deepToString(arr_2D[0]))
+
 }
