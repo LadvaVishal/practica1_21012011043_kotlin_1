@@ -2,16 +2,15 @@ import java.util.Arrays
 
 fun main()
 {
-
-    var arr1= arrayOf(1,2,3,4,5)
+    var arr1= arrayOf(1,4,31,43,2)
     println("Using arrayof function:")
     println(Arrays.deepToString(arr1))
 
     var arr2=IntArray(5)
     arr2[0]=1
-    arr2[1]=2
+    arr2[1]=20
     arr2[2]=3
-    arr2[3]=4
+    arr2[3]=42
     arr2[4]=5
     println("Using IntArray function:")
 
@@ -27,19 +26,50 @@ fun main()
     {
         print(" "+arr3[i])
     }
-//   var sort1=arr1.sort()
-//    println("Sorted array  using Built in function")
-//    println("Origional array: ")
-//    println(Arrays.deepToString(arr1))
-//    println(Arrays.deepToString(sort1))
 
-//    var arr4=Array<Int>(5){i:Int->1}
-//    for (i
-  // 2D array
   var arr_2D= arrayOf( arrayOf(1,2,3),
                        arrayOf(4,5,6)
-                     )
+                        )
     println("\n2D array example: \n"+Arrays.deepToString(arr_2D))
-    println("\n2D array example: \n"+Arrays.deepToString(arr_2D[0]))
 
+    println("*********With built-in function**********")
+    println("Origional array: ")
+    println(Arrays.deepToString(arr1))
+    arr1.sort()
+    println("\nAfter Sorting with built-in function : ")
+
+    for (elements in arr1)
+    {
+    print(" "+elements)
+    }
+    println("")
+
+    println("*********Without built-in function**********")
+    println("Origional array: ")
+    for (i in 0..arr2.size-1)
+    {
+        print(" "+arr2[i])
+    }
+    bubbleSort(arr2)
+    println("\nAfter Sorting without built-in function : ")
+    for (elements in arr2)
+    {
+        print(" "+elements)
+    }
+    println("")
+}
+
+fun bubbleSort(arr1: IntArray) {
+    var n = arr1.size
+    for (i in 0 until n-1)
+    {
+        for (j in 0 until n-i-1)
+       {
+            if (arr1[j] > arr1[j+1])
+          { var temp = arr1[j]
+              arr1[j] = arr1[j+1]
+              arr1[j+1] = temp
+    }
+    }
+    }
 }
